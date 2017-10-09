@@ -5,10 +5,12 @@
 # See documentation in:
 # http://doc.scrapy.org/en/latest/topics/items.html
 
-import scrapy
+from scrapy import Item, Field
 
 
-class IpsItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class IpsItem(Item):
+    ip_address = Field()
+    port = Field()
+    type = Field()
+    anonymity_flag = Field()
+    server_place = Field()
